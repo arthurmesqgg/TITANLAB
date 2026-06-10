@@ -122,11 +122,10 @@ body {
     display: flex;
 }
 
-/* ===== CONTAINER GERAL ===== */
-
+/* ===== CONTAINER ===== */
 .container {
-    padding: 20px;
-    max-width: 1000px;
+    padding: 30px 40px;
+    max-width: 1600px;
     margin: auto;
     min-height: 60vh;
 }
@@ -197,14 +196,14 @@ p {
 }
 
 /* ===== CARROSSEL ===== */
-
 .carousel {
     position: relative;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 12px;
 }
+
 
 .slides {
     display: flex;
@@ -213,11 +212,28 @@ p {
 
 .slides img {
     width: 100%;
-    height: clamp(200px, 45vw, 500px);
-    object-fit: cover;       /* preenche sem distorcer */
-    object-position: center; /* centra o foco da imagem */
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
     flex-shrink: 0;
 }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 
 /* Botões prev/next do carrossel */
 .prev, .next {
